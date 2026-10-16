@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faris Kadric</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        serif: ['"Lora"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="selection:bg-amber-500/20 selection:text-amber-200">
+
+    <div class="grain-overlay"></div>
+
+    <header class="sticky top-0 z-40 backdrop-blur-md bg-[#141211]/90 border-b border-[var(--border-color)]">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#about" class="flex items-center gap-3 group">
+                <span class="w-8 h-8 rounded-lg border border-[var(--border-color)] group-hover:border-[var(--accent)] flex items-center justify-center font-mono font-bold text-xs accent-text bg-[var(--bg-card)] transition-colors">
+                    FK
+                </span>
+            </a>
+
+            <nav class="flex items-center gap-6 font-mono text-xs text-[var(--text-muted)]">
+                <a href="#about" class="hover:text-[var(--accent)] transition-colors">/about</a>
+                <a href="#projects" class="hover:text-[var(--accent)] transition-colors">/projects</a>
+                <a href="#experience" class="hover:text-[var(--accent)] transition-colors">/experience</a>
+                <a href="#contact" class="hover:text-[var(--accent)] transition-colors">/contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-24 warm-glow">
+
+        
+        <section id="about" class="space-y-8 pt-4">
+            <div class="space-y-4">
+                
+
+                <h1 class="font-serif text-3xl sm:text-4xl font-normal text-[var(--text-main)] leading-tight">
+                    Hi, I'm <span class="font-medium accent-text">Faris Kadric</span>. <br>
+                    I write systems software, compilers, and tools.
+                </h1>
+            </div>
+
+            <p class="text-base sm:text-lg text-[var(--text-muted)] font-sans leading-relaxed max-w-2xl">
+                I'm a computer science undergrad at International Burch University with a deep appreciation for low-level architecture, memory safety, and transparent software. I also write software that's akin to former statement :)
+            </p>
+
+            <div class="flex items-center gap-4 font-mono text-xs text-[var(--text-muted)] pt-2">
+                <span class="flex items-center gap-1.5"><i data-lucide="code-2" class="w-4 h-4 accent-text"></i> Rust, Go, C++20</span>
+            </div>
+        </section>
+
+        
+        <section id="projects" class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--border-color)] pb-4">
+                <div>
+                    <h2 class="font-serif text-2xl font-normal text-[var(--text-main)]">Projects</h2>
+                </div>
+            </div>
+
+            <div class="cozy-card rounded-xl p-6 space-y-4 project-card" data-category="go">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono font-bold text-xs px-2 py-1 rounded bg-[var(--code-bg)] border border-[var(--border-color)] accent-text">Go</span>
+                            <h3 class="font-mono font-semibold text-lg text-[var(--text-main)]">RESTful API</h3>
+                        </div>
+                        <div class="flex items-center gap-4 text-xs font-mono text-[var(--text-muted)]">
+                            <a href="https://github.com/CoderFaris/go-movies-api" target="_blank" rel="noreferrer" class="hover:text-[var(--accent)] flex items-center gap-1 transition-colors">
+                                <span>source code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-[var(--text-muted)] font-sans leading-relaxed">
+                        An API including Middleware, JWT Auth, Query parameter filtering that has 99% test coverage.
+                    </p>
+            </div>
+
+            <div class="cozy-card rounded-xl p-6 space-y-4 project-card" data-category="rust">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono font-bold text-xs px-2 py-1 rounded bg-[var(--code-bg)] border border-[var(--border-color)] accent-text">Rust</span>
+                            <h3 class="font-mono font-semibold text-lg text-[var(--text-main)]">The Kompiler</h3>
+                        </div>
+                        <div class="flex items-center gap-4 text-xs font-mono text-[var(--text-muted)]">
+                            <a class="hover:text-[var(--accent)] flex items-center gap-1 transition-colors">
+                                <span>coming soon</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    
+
+                    <p class="text-sm text-[var(--text-muted)] font-sans leading-relaxed">
+                        A compiler that consists of 3 stages: Frontend (Lexer, Parser), Optimizer and Backend (LLVM)
+                    </p>                    
+            </div>
+
+            <div class="space-y-6">
+                <div class="cozy-card rounded-xl p-6 space-y-4 project-card" data-category="c">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div class="flex items-center gap-3">
+                            <span class="font-mono font-bold text-xs px-2 py-1 rounded bg-[var(--code-bg)] border border-[var(--border-color)] accent-text">C11</span>
+                            <h3 class="font-mono font-semibold text-lg text-[var(--text-main)]">fsh — Minimalist POSIX Shell</h3>
+                        </div>
+                        <div class="flex items-center gap-4 text-xs font-mono text-[var(--text-muted)]">
+                            <a href="https://github.com/CoderFaris/Lightweight-POSIX-Shell" target="_blank" rel="noreferrer" class="hover:text-[var(--accent)] flex items-center gap-1 transition-colors">
+                                <span>source code</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-[var(--text-muted)] font-sans leading-relaxed">
+                        A lightweight Unix shell that wraps standard commands, handles process creation (fork/execvp) and standard input/output redirection. Bonus being 4 custom commands.
+                    </p>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="experience" class="space-y-8">
+            <div class="border-b border-[var(--border-color)] pb-4">
+                <h2 class="font-serif text-2xl font-normal text-[var(--text-main)]">Experience</h2>
+            </div>
+
+            <div class="space-y-6">
+                
+                <div class="cozy-card p-6 rounded-xl space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="font-mono font-semibold text-base text-[var(--text-main)]">Demonstrator</h3>
+                        <span class="font-mono text-xs text-[var(--accent)]">2026 — Present</span>
+                    </div>
+                    <span class="block font-mono text-xs text-[var(--text-muted)]">International Burch University</span>
+                    <p class="text-sm text-[var(--text-muted)] font-sans leading-relaxed pt-1">
+                        Helping fellow colleagues with Web Programming (PHP, HTML/CSS/JS) and their projects.
+                    </p>
+                </div>
+
+                <div class="cozy-card p-6 rounded-xl space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h3 class="font-mono font-semibold text-base text-[var(--text-main)]">Intern</h3>
+                        <span class="font-mono text-xs text-[var(--text-muted)]">2026</span>
+                    </div>
+                    <span class="block font-mono text-xs text-[var(--text-muted)]">NGS Sarajevo</span>
+                    <p class="text-sm text-[var(--text-muted)] font-sans leading-relaxed pt-1">
+                        Performed and created various types of tests (Unit, Integration, E2E) for CRM software.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section id="contact" class="space-y-8">
+            <div class="border-b border-[var(--border-color)] pb-4">
+                <h2 class="font-serif text-2xl font-normal text-[var(--text-main)]">Contact</h2>
+            </div>
+
+            <div>
+                <div class="space-y-6">
+                    <p class="text-sm text-[var(--text-muted)] font-sans leading-relaxed">
+                        I'm always open to talking about software. Drop me a note!
+                    </p>
+
+                    
+                    <div class="cozy-card p-4 rounded-xl space-y-2">
+                        <span class="font-mono text-xs text-[var(--text-muted)] block">Email address:</span>
+                        <div class="flex items-center justify-between bg-[var(--code-bg)] p-3 rounded-lg border border-[var(--border-color)] font-mono text-xs">
+                            <span id="email-text" class="text-[var(--text-main)] font-semibold">faris.kadric24@gmail.com</span>
+                            <button onclick="copyEmail()" id="copy-btn" class="accent-text hover:underline flex items-center gap-1">
+                                <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                                <span>copy</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 font-mono text-sm text-[var(--text-muted)] pt-2">
+                        <a href="https://github.com/CoderFaris" target="_blank" rel="noreferrer" class="cozy-card px-4 py-3 rounded-xl flex items-center gap-2 hover:text-[var(--accent)] transition-colors flex-1 justify-center">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/faris-kadri%C4%87-289632303/" target="_blank" rel="noreferrer" class="cozy-card px-4 py-3 rounded-xl flex items-center gap-2 hover:text-[var(--accent)] transition-colors flex-1 justify-center">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-[var(--border-color)] py-8 text-center font-mono text-xs text-[var(--text-muted)]">
+        <p>Faris Kadric • 2026</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
